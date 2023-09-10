@@ -1,0 +1,12 @@
+<%= form_with(url: videos_path, model: @user_video, method: :post) do |f| %>
+<%= f.hidden_field :video_id %>
+  <div class="mb-3">
+    <label for="" class="form-label">User</label>
+    <%= f.collection_select(:user_id, User.all, :id, :email, { include_hidden: false}, {:multiple => true, class: "form-control"}) %>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Content</label>
+    <%= f.text_area :content, class: "form-control" %>
+  </div>
+  <%= f.submit 'Submit', class: "btn btn-primary"%>
+<% end %>

@@ -1,0 +1,11 @@
+<% @videos.each do |video| %>
+  <div class="card" style="width: 18rem;">
+    <iframe class="w-full aspect-video hover:aspect-square" src=<%=video.url %>></iframe>
+    <div class="card-body">
+        <h5 class="card-title">
+            <%=video.title %>
+        </h5>
+        <%= link_to 'Share video' , video_path(video.id), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

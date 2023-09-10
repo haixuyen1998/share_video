@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: video_development1
+  pool: 5
+  username: video
+  password: 123456
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: video_test1
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: video_production1
